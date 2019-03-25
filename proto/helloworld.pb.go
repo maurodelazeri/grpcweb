@@ -130,6 +130,10 @@ var fileDescriptor_17b8c58d586b62f2 = []byte{
 var _ context.Context
 var _ grpc.ClientConn
 
+func errUnimplemented(methodName string) error {
+	return status.Errorf(codes.Unimplemented, "method %s not implemented", methodName)
+}
+
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
@@ -170,7 +174,7 @@ type UnimplementedGreeterServer struct {
 }
 
 func (*UnimplementedGreeterServer) SayHello(ctx context.Context, req *HelloRequest) (*HelloReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SayHello not implemented")
+	return nil, errUnimplemented("SayHello")
 }
 
 func RegisterGreeterServer(s *grpc.Server, srv GreeterServer) {
