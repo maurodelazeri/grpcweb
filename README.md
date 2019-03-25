@@ -11,3 +11,17 @@ protoc helloworld.proto  --js_out=import_style=commonjs:. --grpc-web_out=import_
 cd proto/
 protoc helloworld.proto --go_out=plugins=grpc:.
 ```
+
+Start the server
+
+```
+go run main.go
+```
+
+Start the app
+
+```
+cd app/my-app/
+yarn install
+yarn start
+```
