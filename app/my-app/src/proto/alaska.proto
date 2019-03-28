@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.alaska.api";
+option java_outer_classname = "AlaskaProto";
+option objc_class_prefix = "HLW";
+
+package alaska;
+
+import "user.proto";
+//import "venues.proto";
+//import "execution.proto";
+//import "backtesting.proto";
+//import "reports.proto";
+//import "accounts.proto";
+//import "currencies.proto";
+//import "products.proto";
+//import "balances.proto";
+//import "marketdata.proto";
+//import "market.proto";
+//import "statistics.proto";
+
+// The greeting service definition.
+//service Greeter {
+//    // Sends a greeting
+//    rpc SayHello (HelloRequest) returns (HelloReply) {
+//    }
+//}
+
+// https://www.mql5.com/en/docs/standardlibrary/tradeclasses/ctrade/ctradepositionclose
+
+// The API service definition.
+service Alaska {
+    rpc Login(LoginRequest) returns (LoginResponse) {}
+//    rpc GetCurrencies(CurrencyRequest) returns (CurrencyResponse) {}
+//    rpc PostCurrency(CurrencyPostRequest) returns (CurrencyPostResponse) {}
+//
+//    rpc GetVenues(VenueRequest) returns (VenueResponse) {}
+//    rpc PostVenue(VenuePostRequest) returns (VenuePostResponse) {}
+//
+//    rpc GetProducts(ProductRequest) returns (ProductResponse) {}
+//    rpc PostProduct(ProductPostRequest) returns (ProductPostResponse) {}
+//
+//    rpc GetAccounts(AccountRequest) returns (AccountResponse) {}
+//    rpc PostAccount(AccountPostRequest) returns (AccountPostResponse) {}
+//
+//    rpc GetBalances(BalanceRequest) returns (BalanceResponse) {}
+//
+//    rpc GetAccountsFunds(AccountFundsRequest) returns (AccountFundsResponse) {}
+//    rpc PostAccountFund(AccountFundPostRequest) returns (AccountFundPostResponse) {}
+//    rpc PostAccountTransfer(AccountTransferPostRequest) returns (AccountTransferPostResponse) {}
+//    rpc PostAccountWithdrawal(AccountWithdrawalPostRequest) returns (AccountWithdrawalPostResponse) {}
+//
+//    rpc GetTrades(TradeRequest) returns (TradeResponse) {}
+//
+//    rpc GetMarketKindSummary(MarketKindSummaryRequest) returns (MarketKindSummaryResponse) {}
+//    rpc GetMarketProductSummary(MarketProductSummaryRequest) returns (MarketProductSummaryResponse) {}
+//    rpc GetTradesDeadman(TradesDeadmanRequest) returns (TradesDeadmanResponse) {}
+//    rpc GetOrderbooksDeadman(OrderbookDeadmanRequest) returns (OrderbookDeadmanResponse) {}
+//
+//    rpc GetBars(BarRequest) returns (BarResponse) {}
+//
+//    rpc GetProductWeekSeelWeek(BuySellWeekRequest) returns (BuySellWeekResponse) {}
+//
+//
+//    // Get all Order for a user with filter - A server-to-client streaming RPC.
+//    // rpc GetOrders(OrderFilter) returns (stream Order) {}
+//    // Order request - A simple RPC
+//    rpc OrderSend(OrderRequest) returns (OrderResult) {}
+//    rpc GetPositions(PositionRequest) returns (PositionsResult) {}
+//    rpc GetHistoticalTrades(HistoricalTradesRequest) returns (stream HistoricalTradesResult) {}
+//    rpc GetBacktestingToken(BacktestingTokenRequest) returns (BacktestingTokenResponse) {}
+//    rpc Backtesting(stream BacktestingRequest) returns (stream BacktestingResponse) {}
+
+}
