@@ -1,0 +1,7 @@
+FROM envoyproxy/envoy-dev:latest
+COPY envoy.yaml /etc/envoy/envoy.yaml
+RUN mkdir /var/log/envoy/
+
+#COPY ./bin/service /usr/local/bin/srv
+#COPY ./script/grpc_start /etc/grpc_start
+#CMD /etc/grpc_start
